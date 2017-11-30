@@ -5,7 +5,7 @@ $(document).ready(function(){
     $.ajax({
       url:'../php/mensajes.php',
       success:function(data){
-        $('#mensajes').html(data);
+        $('#chatbox').html(data);
       }
     });
   },1000);

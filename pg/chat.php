@@ -1,8 +1,9 @@
 <?php
-ini_set('display_errors',1);
-ini_set('display_starup_errors',1);
-error_reporting(E_ALL);
 
+#Esto visualiza si hay un error
+// ini_set('display_errors',1);
+// ini_set('display_starup_errors',1);
+// error_reporting(E_ALL);
 
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -36,9 +37,9 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
        <form class="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
          <div class="mensajes">
 <!--  Chat -->
-           <textarea readonly id="mensajes">
+           <div  id="chatbox">
 
-           </textarea>
+           </div>
        </div>
       <div class="msg">
         <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></input>
