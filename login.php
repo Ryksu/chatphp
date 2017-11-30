@@ -63,7 +63,11 @@ $msg = '';
     </div>
    <?php endif; ?>
     <div class="boton">
+<<<<<<< HEAD
       <a type="submit" name="button" class="registro" value="Registro" formaction="pg/registro.php"> Registro</a>
+=======
+      <button type="submit" name="button" class="registro" value="Registro" formaction="pg/registro.php"> Registro</button>  
+>>>>>>> 9eaffda4fb046176b77c540dbb26b5bb8dd40fc1
       <input type="submit" name="iniciar" value="inicar sesión" class="iniciar">
     </div>
     </form>
