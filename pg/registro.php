@@ -45,6 +45,9 @@ if (isset($_POST['enviar'])) {
           <input type="date" name="years" value="" required>
         </div>
         <div class="boton">
+          <div class="volver">
+            <a href="../login.php">Volver</a>
+          </div>
           <input type="submit" name="enviar" value="Registrarse">
         </div>
 

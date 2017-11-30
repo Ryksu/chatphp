@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  margin-bottom: 1em;
 }
 .form{
   display: flex;
@@ -41,8 +42,27 @@
   border:none;
   border-radius: 5px;
   color: #FAFAFA;
+  font-size: .8em;
 }
 .form .boton:hover{
   background-color: #7dd181;
+  font-weight: bold;
+}
+.cerrar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cerrar a {
+  background-color: #095256;
+  border-radius: 5px;
+  color: #FAFAFA;
+  padding: 8px;
+  text-decoration: none;
+  font-size: .8em;
+}
 
+.cerrar a:hover{
+  background-color: #7dd181;
+  font-weight: bold;
 }

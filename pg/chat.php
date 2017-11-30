@@ -41,11 +41,14 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
            </textarea>
        </div>
       <div class="msg">
-        <textarea type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></textarea>
+        <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></input>
         <input type="submit" name="enviar" value="enviar" class="boton">
       </div>
 
        </form>
+      </div>
+      <div class="cerrar">
+        <a href="../php/logout.php">Cerrar sesión</a>
       </div>
     </div>
 
