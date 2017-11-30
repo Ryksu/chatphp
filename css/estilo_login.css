@@ -1,0 +1,94 @@
+@font-face {
+  src: url("../fonts/FontAwesome.otf");
+  font-family: FontAwesome;
+}
+#contenedor{
+  display: flex;
+  justify-content: center;
+ width: 100%;
+}
+
+.login  {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction:  column;
+  border: 2px solid #7dd181;
+  padding: 25px;
+  border-radius: 5px;
+  }
+.login .icon-user::before{
+  font-family: FontAwesome;
+  content: "\f007";
+  font-size: 1.5em;
+  color: #095256;
+  text-align: left;
+  margin-right: .2em;
+}
+
+.login .icon-password::before{
+  font-family: FontAwesome;
+  content: "\f023";
+  font-size: 1.5em;
+  color: #095256;
+  text-align: left;
+  margin-right: .2em;
+
+
+}
+.usuario, .password{
+  width: 100%;
+  display: inline-flex;
+ flex-direction:row;
+}
+.login .usuario input,.login .password input{
+  font-size: 1em;
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  border: 2px solid #7dd181;
+  border-radius: 5px;
+
+
+}
+.boton{
+  width: 100%;
+  display: flex;
+  justify-content:  flex-end;
+
+}
+.login .boton input{
+  color:#FAFAFA;
+  background-color: #095256;
+  border: none;
+  border-radius: 5px;
+  font-size: .9em;
+  font-weight: bold;
+  padding: 10px;
+}
+.boton input:hover{
+  background-color: #7dd181;
+}
+.login .boton button{
+  color:#FAFAFA;
+  background-color: #095256;
+  border: none;
+  border-radius: 5px;
+  font-size: .9em;
+  font-weight: bold;
+  padding: 10px;
+}
+.boton .registro{
+  margin-right: 1em;
+}
+.boton .registro:hover{
+  background-color: #7dd181;
+
+}
+.error{
+  width: 100%;
+  display: flex;
+  color: #b53d3d;
+  font-weight: bold;
+
+}
