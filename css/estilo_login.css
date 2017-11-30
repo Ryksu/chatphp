@@ -2,6 +2,11 @@
   src: url("../fonts/FontAwesome.otf");
   font-family: FontAwesome;
 }
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
+ font-family: 'Source Sans Pro', sans-serif;
+
+}
 #contenedor{
   display: flex;
   justify-content: center;

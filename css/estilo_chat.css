@@ -1,3 +1,9 @@
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
 .chat{
   display: flex;
   justify-content: center;
