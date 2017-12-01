@@ -1,9 +1,9 @@
 <?php
 
 #Esto visualiza si hay un error
-// ini_set('display_errors',1);
-// ini_set('display_starup_errors',1);
-// error_reporting(E_ALL);
+ini_set('display_errors',1);
+ini_set('display_starup_errors',1);
+error_reporting(E_ALL);
 
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -20,12 +20,6 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
 	$sql = $conexion -> prepare($query);
   $sql->execute();
 }
-$color[0]='red';
-$color[1]='blue';
-$color[2]='yellow';
-$color[3]='orange';
-$color[4]='green';
-$i = rand(0,4);
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +28,7 @@ $i = rand(0,4);
     <meta charset="utf-8">
     <title>Chat</title>
     <link rel="stylesheet" href="../css/estilo_chat.css">
-    <style >
-      .color{
-        color: <?php $i ?>;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/estilo_nombre.php">
   </head>
   <body>
     <div class="contenedor">
