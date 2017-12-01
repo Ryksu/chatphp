@@ -20,7 +20,12 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
 	$sql = $conexion -> prepare($query);
   $sql->execute();
 }
-
+$color[0]='red';
+$color[1]='blue';
+$color[2]='yellow';
+$color[3]='orange';
+$color[4]='green';
+$i = rand(0,4);
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +34,11 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
     <meta charset="utf-8">
     <title>Chat</title>
     <link rel="stylesheet" href="../css/estilo_chat.css">
+    <style >
+      .color{
+        color: <?php $i ?>;
+      }
+    </style>
   </head>
   <body>
     <div class="contenedor">
