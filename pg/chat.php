@@ -29,6 +29,7 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
     <title>Chat</title>
     <link rel="stylesheet" href="../css/estilo_chat.css">
     <link rel="stylesheet" href="../css/estilo_nombre.php">
+    <script src="../js/estilo_usuarios.js"></script>
   </head>
   <body>
     <div class="contenedor">
@@ -42,8 +43,8 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
            </div>
        </div>
       <div class="msg">
-        <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></input>
-        <input type="submit" name="enviar" value="enviar" class="boton">
+        <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." >
+        <input type="submit" name="enviar" value="enviar" class="boton" id="enviar">
       </div>
 
        </form>
@@ -55,6 +56,7 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
 
     <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="../js/auto_refresh.js" charset="utf-8"></script>
+
 
 
   </body>

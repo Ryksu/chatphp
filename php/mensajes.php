@@ -1,6 +1,7 @@
 <?php
 require 'conexion.php';
 session_start();
+$user = $_SESSION['user'];
 if (!isset($_SESSION['user'])) {
   header('location:../login.php');
 }
@@ -11,8 +12,9 @@ $sql->execute();
 $res = $sql->fetchAll();
 
 foreach ($res as $row) {
-  echo '<div class="chating">
-  <p><span class="color"><b>'.$row['user_name'].'</b></span>: '. $row['mensajes'].'</p>
-  </div>';
+  echo '<article class="chating">
+  <p><span id='."$user".'><b>'.$row['user_name'].'</b></span>: '. $row['mensajes'].'</p>
+  </article>';
 }
+exit();
 ?>
