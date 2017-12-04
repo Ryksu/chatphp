@@ -1,7 +1,5 @@
 <?php
 session_start();
-# Variables sessiones;
-$_SESSION['user'] = $_POST['user'];
 
 require 'php/conexion.php';
 $msg = '';
@@ -11,6 +9,8 @@ $msg = '';
  if (isset($_POST['iniciar'])) {
     $user = $_POST['user'];
     $passwd = $_POST['password'];
+    $_SESSION['user'] = $_POST['user'];
+
     # Vemos si no esta vacio ejecutara la sentencia en caso contrario saltara un error;
     if (  ((!empty($user)) && (!empty($passwd))) ) {
 

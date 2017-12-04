@@ -1,9 +1,9 @@
 <?php
 
 #Esto visualiza si hay un error
-ini_set('display_errors',1);
-ini_set('display_starup_errors',1);
-error_reporting(E_ALL);
+// ini_set('display_errors',1);
+// ini_set('display_starup_errors',1);
+// error_reporting(E_ALL);
 
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -44,7 +44,7 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
            </div>
        </div>
       <div class="msg">
-        <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></input>
+        <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." >
         <input type="submit" name="enviar" value="enviar" class="boton">
       </div>
 
