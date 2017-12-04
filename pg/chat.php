@@ -6,6 +6,7 @@ ini_set('display_starup_errors',1);
 error_reporting(E_ALL);
 
 session_start();
+$msg = "";
 if (!isset($_SESSION['user'])) {
   header('Location:../login.php');
 }
@@ -15,10 +16,30 @@ require '../php/conexion.php';
 $conexion = conectar();
 if (isset($_POST['enviar'])) {
   $mgs = $_POST['mensaje'];
-
-$query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."')";
+  $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."')";
 	$sql = $conexion -> prepare($query);
   $sql->execute();
+}
+if (!isset($_FILES["imagen"])|| $_FILES["imagen"]["error"]>0) {
+  $msg .= " Ha ocurrido un error ";
+}else {
+  $permitidos = array("image/jpg","image/jpeg","image/gif","image/png");
+  $limite_kb = 16384;
+
+  if (in_array($_FILES['imagen']['type'],$permitidos)&& $_FILES['imagen']['size']<= $limite_kb * 1024) {
+    $imagen_temporal = $FILES['imagen']['tmp_name'];
+    $tipo = $_FILES['imagen']['type'];
+
+    $fp = fopen($imagen_temporal,'r+b');
+    $data = fread($fp, filesize($imagen_temporal));
+    fclose($fp);
+    $data = quote($data);
+    $query = "INSERT INTO Imagenes(imagen,tip_imagen) VALUES('".$data."','".$tipo_imagen."')";
+    $sql = $conexion->prepare($query);
+    $sql->execute();
+  }
+
+
 }
 ?>
 
@@ -44,6 +65,13 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
            </div>
        </div>
       <div class="msg">
+      <label class="icon-imagen"></label>
+       <input type="file" name="imagen" value="imagen">
+       <?php if(!empty($msg)): ?>
+         <div class="error">
+           <label><?php echo $msg; ?></label>
+         </div>
+      <?php endif; ?>
         <input type="text" name="mensaje" value="" class="texto" placeholder="Escribe un mensaje..." ></input>
         <input type="submit" name="enviar" value="enviar" class="boton">
       </div>
