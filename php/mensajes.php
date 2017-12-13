@@ -11,7 +11,7 @@ $sql->execute();
 $res = $sql->fetchAll();
 
 foreach ($res as $row) {
-  echo '<div class="chating">
+  echo '<div class="chatting">
   <p><span class="color"><b>'.$row['user_name'].'</b></span>: '. $row['mensajes'].'</p>
   <p><small>'.$row['hora'].'</small></p>
   </div>';

@@ -10,6 +10,7 @@
  font-family: 'Source Sans Pro', sans-serif;
 
 }
+
 #contenedor{
   display: flex;
   justify-content: center;
@@ -24,6 +25,8 @@
   border: 2px solid #7dd181;
   padding: 25px;
   border-radius: 5px;
+  background: #ebf5df;
+  
   }
 
   .icon-user,.icon-password,.icon-email,.icon-years{

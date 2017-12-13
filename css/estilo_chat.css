@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+@font-face {
+  src: url("../fonts/FontAwesome.otf");
+  font-family: FontAwesome;
+}
+
 *{
  font-family: 'Source Sans Pro', sans-serif;
 }
 body{
-  background-color: #f3faf3;
+  background: #ebf5df;
+
 }
 .contenedor{
   width: 100%;
@@ -26,12 +33,20 @@ body{
     max-width: 320px;
     max-height: 420px;
   }
+   .bajar{
+    left: 80%;
+    bottom: 13%;
+  }
 }
 @media screen and (min-width:480px) and (max-width:720px){
   #chatbox{
     max-width: 480px;
     max-height: 500px;
 
+  }
+   .bajar{
+    left: 87%;
+    bottom: 12%;
   }
 
 }
@@ -42,8 +57,37 @@ body{
     min-height: 500px;
     max-height: 500px;
   }
+  .bajar{
+    left: 91%;
+    bottom: 12%;
+  }
+
+}
+.bajar{
+ width: 50px;
+ height: 50px;
+ display: block;
+ position: relative;
+
+ border-radius: 50%;
+ border:none;
+ background-color: #095256;
 }
 
+
+.bajar::before{
+  display: flex;
+  justify-content: center;
+  font-family: FontAwesome;
+  content: "\f103";
+  font-size: 3em;
+  text-align: center;
+  color: #FFFF;
+}
+
+.bajar:hover{
+  background-color: #7dd181;
+}
  #chatbox{
   width: 100%;
 background-color: #ececec;
@@ -63,7 +107,7 @@ background-color: #ececec;
 
 
 }
-.chating{
+.chatting{
   max-width: 100%;
   padding: 2%;
   border: 1px solid #d7d7d7;
