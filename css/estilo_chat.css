@@ -14,7 +14,7 @@ body{
 }
 .contenedor{
   width: 100%;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 
 }
@@ -28,49 +28,59 @@ body{
  display: flex;
  flex-direction:  column;
 }
-@media screen and (min-width:360px) and (max-width:480px) {
+@media screen and (min-width:320px) and (max-width:479px) {
   #chatbox{
-    min-width: 260px;
-    max-height: 420px;
+    max-width: 290px;
+    max-height: 330px;
   }
-   .bajar{
-    left: 80%;
-    bottom: 13%;
+.bajar{
+    left: 82%;
+    bottom: 31%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1.8em;
+    position: fixed;
+
+
   }
 }
-@media screen and (min-width:480px) and (max-width:720px){
+@media screen and (min-width:480px) and (max-width:719px){
   #chatbox{
-    max-width: 480px;
-    max-height: 500px;
+    max-width: 360px;
+    max-height: 400px;
 
   }
    .bajar{
-    left: 87%;
-    bottom: 12%;
+    left: 78%;
+    bottom: 18%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  font-size: 2.5em;
+    position: absolute;
+
+
   }
 
 }
-@media screen and (min-width:720px) {
+@media screen and (min-width:720px)  {
   #chatbox{
-
-    min-width: 720px;
     min-height: 500px;
     max-height: 500px;
   }
   .bajar{
-    left: 91%;
-    bottom: 12%;
+    left: 65%;
+    bottom: 430px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 3em;
+    position:absolute;
   }
 
 }
 .bajar{
- width: 50px;
- height: 50px;
- display: block;
- position: relative;
-
- border-radius: 50%;
- border:none;
  background-color: #095256;
 }
 
@@ -80,7 +90,6 @@ body{
   justify-content: center;
   font-family: FontAwesome;
   content: "\f103";
-  font-size: 3em;
   text-align: center;
   color: #FFFF;
 }
@@ -89,7 +98,6 @@ body{
   background-color: #7dd181;
 }
  #chatbox{
-  width: 100%;
 background-color: #ececec;
  border: 2px solid #7dd181;
  border-radius: 5px;
@@ -102,22 +110,24 @@ background-color: #ececec;
  flex-direction: column;
 }
 #chatbox img{
-  max-width: 100%;
-  padding: 10px;
-
-
+  max-width: 50%;
 }
 .chatting{
   max-width: 100%;
-  padding: 2%;
+  padding: 0  .40em;
   border: 1px solid #d7d7d7;
   border-radius: 4px;
-  margin-bottom: .2em;
+  margin-bottom: .5em;
+  font-size: .9em;
+}
+.chatting .hora{
+  float: right;
+  text-align:   right;
+  font-size: .6em;
 }
 
 
 .msg{
- width: 100%;
  display: flex;
  flex-direction: row;
 
