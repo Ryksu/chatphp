@@ -30,7 +30,7 @@ body{
 }
 @media screen and (min-width:360px) and (max-width:480px) {
   #chatbox{
-    max-width: 320px;
+    min-width: 260px;
     max-height: 420px;
   }
    .bajar{
