@@ -42,7 +42,7 @@ $query = "INSERT INTO Mensajes(user_name,mensajes) VALUES('".$user."','".$mgs."'
            <div  id="chatbox">
 
            </div>
-            <a class="bajar" onclick="scrollToBotton('chatbox')">            </a>
+            <a class="bajar" onclick="scrollToBotton('chatbox')"></a>
          </div>
       <div class="msg">
 

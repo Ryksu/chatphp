@@ -1,32 +1,40 @@
-
+ @import url('https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro');
 
 @font-face {
   src: url("../fonts/FontAwesome.otf");
   font-family: FontAwesome;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-*{
- font-family: 'Source Sans Pro', sans-serif;
+body{
+  background:linear-gradient(-90deg,#93d697 10%,#a6d8a9 65%)  ;
+  background-size: cover;
 
 }
-
 #contenedor{
-  display: flex;
-  justify-content: center;
- width: 100%;
-}
 
+}
+header{
+text-align: center;
+font-family: 'Nunito', sans-serif;
+  color:#FAFAFA;
+  text-shadow: .1em .2em .3em #000000;
+  font-size: 1.5em;
+
+}
 .form  {
   width: 100%;
   max-width: 400px;
   display: flex;
   flex-direction:  column;
   border: 2px solid #7dd181;
-  padding: 25px;
-  border-radius: 5px;
+  padding: 10px 1%;
+  border-radius: 20px;
   background: #ebf5df;
-  
+  margin: 0 auto;
+  }
+  .titulo{
+    text-align: center;
+    color: #75756e;
+    font-family: 'Source Code Pro', monospace;
   }
 
   .icon-user,.icon-password,.icon-email,.icon-years{
@@ -46,12 +54,13 @@
 }
 .form .icon-email::before{
   content: "\f0e0";
+  font-size: .6em;
   }
 
 .form .icon-years::before{
   content: "\f073";
+  font-size: .6em;
 }
-
 .usuario, .password, .email, .years{
   width: 100%;
   display: inline-flex;
@@ -64,6 +73,8 @@
   display: flex;
   border: 2px solid #7dd181;
   border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+
 }
 .form .years input{
   display: inline-block;
@@ -83,6 +94,8 @@
   border-radius: 5px;
   font-size: .9em;
   font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+
 }
 .boton input:hover{
   background-color: #7dd181;
@@ -100,6 +113,8 @@
   font-weight: bold;
   padding: 10px;
   text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+
 
 }
 

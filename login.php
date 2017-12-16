@@ -47,7 +47,13 @@ $msg = '';
   </head>
   <body>
     <div id="contenedor">
+      <header>
+        <h1>Muchat.ga</h1>
+      </header>
     <form class="login" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+      <div class="titulo">
+        <h2>Login</h2>
+      </div>
       <div class="usuario">
       <label class="icon-user"></label>
       <input type="text" name="user" value="" placeholder="Usuario">
